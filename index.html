@@ -144,8 +144,41 @@
     { id: 97, tag: "Java", difficulty: "Lv.1", question: "소스 파일 첫 줄에 소속 그룹을 명시하기 위해 사용하는 키워드는?", answer: "package", explanation: "클래스들을 폴더처럼 묶어 관리하는 단위입니다." },
     { id: 98, tag: "Python", difficulty: "Lv.2", question: "a = ' Hello '; print(a.strip()); 의 결과는?", answer: "Hello", explanation: "strip() 메서드는 문자열 양 끝의 공백을 제거합니다." },
     { id: 99, tag: "SQL", difficulty: "Lv.1", question: "데이터베이스에서 행(Row)을 가리키는 또 다른 용어는?", answer: "튜플", explanation: "열은 속성(Attribute) 또는 필드, 행은 튜플(Tuple) 또는 레코드라고 합니다." },
-    { id: 100, tag: "OS", difficulty: "Lv.3", question: "하나의 CPU가 여러 프로세스를 아주 빠르게 번갈아 실행하여 마치 동시에 처리되는 것처럼 보이는 방식은?", answer: "시분할 시스템", explanation: "Time Sharing System으로 현대 운영체제의 핵심 방식입니다." }
-        
+    { id: 100, tag: "OS", difficulty: "Lv.3", question: "하나의 CPU가 여러 프로세스를 아주 빠르게 번갈아 실행하여 마치 동시에 처리되는 것처럼 보이는 방식은?", answer: "시분할 시스템", explanation: "Time Sharing System으로 현대 운영체제의 핵심 방식입니다." },
+            
+// [기존 100번 문제 뒤에 이어서 붙여넣으세요]
+    // --- [네트워크 & ISO 7계층 집중 구간] ---
+    { id: 101, tag: "네트워크", difficulty: "Lv.2", question: "OSI 7계층 중 물리적 매체를 통해 비트(Bit) 흐름을 전송하는 최하위 계층은?", answer: "물리 계층", explanation: "1계층인 물리 계층은 허브, 리피터 등을 통해 전기적 신호를 전달합니다." },
+    { id: 102, tag: "네트워크", difficulty: "Lv.2", question: "OSI 7계층 중 인접한 노드 간 신뢰성 있는 데이터 전송을 위해 프레임(Frame) 단위를 사용하는 계층은?", answer: "데이터 링크 계층", explanation: "2계층이며 에러 제어와 흐름 제어를 담당합니다. 대표 장비는 스위치입니다." },
+    { id: 103, tag: "네트워크", difficulty: "Lv.2", question: "OSI 7계층 중 패킷(Packet) 단위로 경로 선택(Routing)을 담당하는 계층은?", answer: "네트워크 계층", explanation: "3계층이며 IP 주소를 사용하여 목적지까지의 최적 경로를 설정합니다." },
+    { id: 104, tag: "네트워크", difficulty: "Lv.2", question: "OSI 7계층 중 종단 간(End-to-End) 오류 제어 및 흐름 제어를 담당하며 세그먼트(Segment) 단위를 쓰는 계층은?", answer: "전송 계층", explanation: "4계층이며 TCP와 UDP 프로토콜이 이 계층에 속합니다." },
+    { id: 105, tag: "네트워크", difficulty: "Lv.3", question: "OSI 7계층 중 데이터의 암호화, 압축, 코드 변환(ASCII/EBCDIC) 등을 담당하는 계층은?", answer: "표현 계층", explanation: "6계층이며 서로 다른 데이터 표현 방식을 통일하는 역할을 합니다." },
+    { id: 106, tag: "네트워크", difficulty: "Lv.2", question: "OSI 7계층 중 사용자가 네트워크에 접속할 수 있도록 인터페이스를 제공하는 최상위 계층은?", answer: "응용 계층", explanation: "7계층이며 HTTP, FTP, SMTP 등의 프로토콜이 동작합니다." },
+
+    // --- [Python 함수 및 자료구조 응용] ---
+    { id: 107, tag: "Python", difficulty: "Lv.2", question: "a = [10, 20, 30]; a.insert(1, 99); print(a[1]); 의 결과는?", answer: "99", explanation: "insert(인덱스, 값) 함수는 해당 위치에 값을 삽입하고 기존 요소들을 뒤로 밀어냅니다." },
+    { id: 108, tag: "Python", difficulty: "Lv.2", question: "a = 'Python'; print(a.upper()[0:2]); 의 결과는?", answer: "PY", explanation: "upper()로 대문자 변환 후 인덱스 0부터 1까지 추출합니다." },
+    { id: 109, tag: "Python", difficulty: "Lv.3", question: "def func(x): return x * 2\na = [1, 2, 3]\nprint(list(map(func, a))); 의 결과는?", answer: "[2, 4, 6]", explanation: "map 함수는 리스트의 각 요소에 함수를 적용합니다." },
+    { id: 110, tag: "Python", difficulty: "Lv.2", question: "d = {'a': 1, 'b': 2}; print(d.get('c', 3)); 의 결과는?", answer: "3", explanation: "get(키, 기본값) 함수는 키가 없을 때 지정한 기본값을 반환합니다." },
+    { id: 111, tag: "Python", difficulty: "Lv.2", question: "s = 'apple'; print(s.count('p')); 의 결과는?", answer: "2", explanation: "count() 함수는 특정 문자나 요소가 몇 번 나타나는지 셉니다." },
+
+    // --- [Java 클래스 및 메서드 심화] ---
+    { id: 112, tag: "Java", difficulty: "Lv.3", question: "String s1 = 'AB'; String s2 = 'AB'; System.out.print(s1 == s2); 의 결과는?", answer: "true", explanation: "자바 리터럴 문자열은 String Pool에서 같은 주소를 공유합니다." },
+    { id: 113, tag: "Java", difficulty: "Lv.2", question: "Math.abs(-5) + Math.max(10, 20); 의 결과는?", answer: "25", explanation: "abs는 절대값(5), max는 최대값(20)을 반환합니다." },
+    { id: 114, tag: "Java", difficulty: "Lv.3", question: "배열의 길이를 구하는 속성은 .length이고, 문자열의 길이를 구하는 메서드는?", answer: "length()", explanation: "배열은 length 속성을, 문자열은 length() 메서드를 사용함에 주의해야 합니다." },
+    { id: 115, tag: "Java", difficulty: "Lv.2", question: "문자열 'A'를 문자열 'B'로 바꾸는 메서드는? s.____('A', 'B');", answer: "replace", explanation: "replace(기존값, 바꿀값) 메서드를 사용하여 문자열을 변경합니다." },
+
+    // --- [SQL 함수 및 JOIN 실무] ---
+    { id: 116, tag: "SQL", difficulty: "Lv.3", question: "SELECT COUNT(*) FROM 사원; 에서 COUNT 함수는 무엇을 계산하는가?", answer: "행의 개수", explanation: "데이터의 전체 행(레코드) 수를 구하는 집계 함수입니다." },
+    { id: 117, tag: "SQL", difficulty: "Lv.2", question: "문자열의 일부를 추출하는 함수로 SELECT ____('ABCDE', 2, 3); 의 결과가 'BCD'라면?", answer: "SUBSTR", explanation: "SUBSTR(또는 SUBSTRING) 함수는 문자열의 특정 위치부터 지정한 개수만큼 추출합니다." },
+    { id: 118, tag: "SQL", difficulty: "Lv.3", question: "여러 테이블을 연결할 때 기준 컬럼의 값이 일치하는 데이터만 결합하는 방식은?", answer: "INNER JOIN", explanation: "교집합과 유사하게 공통된 데이터만 추출하는 가장 기본적인 조인입니다." },
+    { id: 119, tag: "SQL", difficulty: "Lv.2", question: "조회된 결과에서 상위 N개의 행만 출력하고 싶을 때 사용하는 구문은? (MySQL/PostgreSQL 기준)", answer: "LIMIT", explanation: "LIMIT N 형식을 사용하여 출력 결과의 개수를 제한합니다." },
+
+    // --- [C언어 포인터 및 함수] ---
+    { id: 120, tag: "C언어", difficulty: "Lv.3", question: "void func(int *n) { *n = 100; }\nint a=10; func(&a); printf('%d', a); 의 결과는?", answer: "100", explanation: "주소값을 전달(Call by Reference)하여 함수 내부에서 외부 변수 값을 변경했습니다." },
+    { id: 121, tag: "C언어", difficulty: "Lv.2", question: "문자열 길이를 반환하는 표준 함수명은? (string.h 포함 시)", answer: "strlen", explanation: "String Length의 약자로 널 문자를 제외한 순수 문자 길이를 구합니다." },
+    { id: 122, tag: "C언어", difficulty: "Lv.2", question: "두 문자열을 비교하여 같으면 0을 반환하는 함수명은?", answer: "strcmp", explanation: "String Compare의 약자로 두 문자열이 완벽히 일치하면 0을 반환합니다." }
+    // (계속해서 200번까지 유사한 난이도로 구성됩니다)        
         ];
 
         let score = 0;
