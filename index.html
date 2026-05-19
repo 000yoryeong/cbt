@@ -48,7 +48,7 @@
             { id: 3, tag: "Java", difficulty: "Lv.3", question: "Parent obj = new Child(); 호출 시 오버라이딩된 메서드가 실행되는 원리는?", answer: "동적 바인딩", explanation: "실행 시점(Runtime)에 실제 객체의 타입을 확인하여 호출할 메서드를 결정하는 원리입니다." },
             { id: 4, tag: "SQL", difficulty: "Lv.1", question: "SELECT * FROM 사원 WHERE 이름 (  ) '김%'; 빈칸에 들어갈 연산자는?", answer: "LIKE", explanation: "부분 일치 패턴을 검색할 때는 LIKE 연산자를 사용합니다." },
             { id: 5, tag: "Linux", difficulty: "Lv.1", question: "파일 권한을 755로 변경하는 명령어는? (파일명: t.txt)", answer: "chmod 755 t.txt", explanation: "chmod는 파일의 접근 권한을 변경하는 명령어입니다." },
-            { id: 6, tag: "Python", difficulty: "Lv.1", question: "str = 'Icheon'; print(str[1:4]); 의 결과는?", answer: "che", explanation: "인덱스 1번부터 4번 '전'까지인 1, 2, 3번 문자를 추출합니다." }
+            { id: 6, tag: "Python", difficulty: "Lv.1", question: "str = 'Icheon'; print(str[1:4]); 의 결과는?", answer: "che", explanation: "인덱스 1번부터 4번 '전'까지인 1, 2, 3번 문자를 추출합니다." },
             { id: 11, tag: "C언어", difficulty: "Lv.1", question: "int arr[3] = {10, 20, 30}; printf('%d', arr[1]); 의 출력값은?", answer: "20", explanation: "배열의 인덱스는 0부터 시작하므로 arr[1]은 두 번째 요소인 20입니다." },
             { id: 12, tag: "Java", difficulty: "Lv.2", question: "메서드의 이름은 같지만 매개변수의 타입이나 개수가 다른 것을 무엇이라 하는가?", answer: "오버로딩", explanation: "오버라이딩(재정의)과 달리 오버로딩은 같은 이름의 메서드를 여러 개 중복하여 정의하는 것입니다." },
             { id: 13, tag: "Python", difficulty: "Lv.1", question: "a = 'Hello'; print(a[-1]) 의 출력값은?", answer: "o", explanation: "파이썬에서 인덱스 -1은 문자열의 가장 마지막 문자를 의미합니다." },
@@ -58,7 +58,40 @@
             { id: 17, tag: "Java", difficulty: "Lv.1", question: "int a = (int)3.14; 의 실행 후 a의 값은?", answer: "3", explanation: "실수형을 정수형(int)으로 강제 형변환(캐스팅)하면 소수점 이하 자리가 버려집니다." },
             { id: 18, tag: "Python", difficulty: "Lv.3", question: "print([x for x in range(5) if x % 2 == 0]) 의 출력값은?", answer: "[0, 2, 4]", explanation: "리스트 컴프리헨션을 사용하여 0부터 4까지의 숫자 중 짝수만 추출하여 리스트를 생성합니다." },
             { id: 19, tag: "SQL", difficulty: "Lv.1", question: "테이블의 구조를 정의하고 생성하는 DDL 명령어는?", answer: "CREATE", explanation: "데이터베이스나 테이블을 생성할 때는 CREATE 명령어를 사용합니다." },
-            { id: 20, tag: "OS", difficulty: "Lv.2", question: "CPU 스케줄링에서 먼저 도착한 프로세스를 먼저 처리하는 알고리즘의 영문 약어는?", answer: "FCFS", explanation: "First-Come First-Served의 약자로, 준비 큐에 도착한 순서대로 CPU를 할당하는 비선점형 방식입니다." }
+            { id: 20, tag: "OS", difficulty: "Lv.2", question: "CPU 스케줄링에서 먼저 도착한 프로세스를 먼저 처리하는 알고리즘의 영문 약어는?", answer: "FCFS", explanation: "First-Come First-Served의 약자로, 준비 큐에 도착한 순서대로 CPU를 할당하는 비선점형 방식입니다." },
+            { id: 21, tag: "C언어", difficulty: "Lv.1", question: "C언어에서 헤더 파일을 소스 코드에 포함시킬 때 사용하는 전처리기 지시자는?", answer: "#include", explanation: "표준 입출력 함수(printf 등)를 사용하기 위해 #include <stdio.h>와 같이 사용합니다." },
+    { id: 22, tag: "C언어", difficulty: "Lv.2", question: "반복문 내에서 특정 조건일 때 남은 코드를 건너뛰고 다음 반복으로 넘어가게 하는 제어문은?", answer: "continue", explanation: "break는 반복문을 완전히 탈출하지만, continue는 현재 회차만 건너뛰고 다음 반복을 계속 진행합니다." },
+    { id: 23, tag: "C언어", difficulty: "Lv.2", question: "변수 a의 메모리 시작 주소를 구하기 위해 사용하는 연산자 기호는?", answer: "&", explanation: "앰퍼샌드(&)는 주소 연산자로, scanf 함수 등에서 변수의 주소를 전달할 때 사용됩니다." },
+    { id: 24, tag: "C언어", difficulty: "Lv.1", question: "int a = 10 % 3; 실행 후 a에 저장되는 값은?", answer: "1", explanation: "% 연산자는 나눗셈의 '나머지'를 구하는 연산자입니다. 10을 3으로 나눈 나머지는 1입니다." },
+
+    { id: 25, tag: "Java", difficulty: "Lv.1", question: "자바 소스 코드(.java)를 컴파일하면 생성되는 바이트 코드 파일의 확장자는?", answer: ".class", explanation: "자바 컴파일러(javac)는 소스 코드를 자바 가상 머신(JVM)이 읽을 수 있는 .class 파일로 변환합니다." },
+    { id: 26, tag: "Java", difficulty: "Lv.1", question: "클래스로부터 객체(인스턴스)를 메모리에 동적으로 생성할 때 사용하는 예약어는?", answer: "new", explanation: "new 키워드는 힙(Heap) 메모리 영역에 새로운 객체를 위한 공간을 할당합니다." },
+    { id: 27, tag: "Java", difficulty: "Lv.3", question: "접근 제어자 중 '같은 패키지' 내부 또는 '상속 관계'에 있는 자식 클래스에서만 접근을 허용하는 것은?", answer: "protected", explanation: "public(모두), protected(상속+같은패키지), default(같은패키지), private(클래스내부) 순으로 범위가 좁아집니다." },
+    { id: 28, tag: "Java", difficulty: "Lv.2", question: "프로그램 실행 중 발생하는 예외(Exception)를 처리하기 위해 사용하는 블록 구조는? (기본 2단어 짝꿍)", answer: "try-catch", explanation: "예외가 발생할 가능성이 있는 코드를 try 블록에 넣고, 발생 시 catch 블록에서 처리합니다." },
+
+    { id: 29, tag: "Python", difficulty: "Lv.1", question: "파이썬에서 한 줄 주석을 작성할 때 사용하는 기호는?", answer: "#", explanation: "파이썬은 샵(#) 기호를 사용하여 코드 실행에 영향을 주지 않는 메모를 남깁니다." },
+    { id: 30, tag: "Python", difficulty: "Lv.1", question: "키(Key)와 값(Value)의 쌍으로 이루어진 파이썬의 자료형을 생성할 때 사용하는 괄호 기호는?", answer: "{}", explanation: "딕셔너리(Dictionary) 자료형은 중괄호 {}를 사용하여 { 'name': 'ssumer' } 형태로 만듭니다." },
+    { id: 31, tag: "Python", difficulty: "Lv.2", question: "리스트의 맨 마지막에 새로운 요소를 하나 추가할 때 사용하는 메서드는?", answer: "append", explanation: "insert(인덱스, 값)와 달리 append(값)는 항상 리스트의 가장 끝에 요소를 덧붙입니다." },
+    { id: 32, tag: "Python", difficulty: "Lv.1", question: "문자열의 길이나 리스트의 전체 요소 개수를 구할 때 사용하는 내장 함수는?", answer: "len", explanation: "length의 약자인 len() 함수를 사용하여 데이터의 길이를 구합니다." },
+
+    { id: 33, tag: "SQL", difficulty: "Lv.2", question: "SELECT 문으로 데이터를 조회할 때 중복된 값을 제거하고 한 번씩만 출력하게 하는 키워드는?", answer: "DISTINCT", explanation: "SELECT DISTINCT 컬럼명 FROM 테이블명 형식으로 사용하여 중복 행을 제거합니다." },
+    { id: 34, tag: "SQL", difficulty: "Lv.1", question: "테이블에 이미 존재하는 데이터(레코드)의 내용을 수정할 때 사용하는 DML 명령어는?", answer: "UPDATE", explanation: "UPDATE 테이블명 SET 컬럼=값 WHERE 조건 형식으로 사용합니다." },
+    { id: 35, tag: "SQL", difficulty: "Lv.2", question: "데이터베이스 사용자에게 특정 권한을 부여하는 DCL 명령어는?", answer: "GRANT", explanation: "권한을 부여할 때는 GRANT, 권한을 회수할 때는 REVOKE를 사용합니다." },
+    { id: 36, tag: "SQL", difficulty: "Lv.2", question: "트랜잭션의 처리가 정상적으로 완료되어 메모리의 변경 사항을 데이터베이스에 영구적으로 반영하는 명령어는?", answer: "COMMIT", explanation: "작업을 취소하고 원래대로 되돌릴 때는 ROLLBACK을 사용합니다." },
+
+    { id: 37, tag: "OS", difficulty: "Lv.1", question: "리눅스(Linux) 파일 시스템에서 가장 최상위에 있는 루트(Root) 디렉토리를 나타내는 기호는?", answer: "/", explanation: "슬래시(/)는 시스템의 절대 경로가 시작되는 최상위 기준점입니다." },
+    { id: 38, tag: "Linux", difficulty: "Lv.1", question: "리눅스에서 텍스트 파일의 내용을 화면에 그대로 출력할 때 사용하는 명령어는?", answer: "cat", explanation: "concatenate의 약자로, 파일 내용을 간단히 확인할 때 자주 쓰입니다." },
+    { id: 39, tag: "OS", difficulty: "Lv.3", question: "운영체제의 핵심 부분으로, 하드웨어와 응용 프로그램 사이에서 자원 관리를 담당하는 것은?", answer: "커널", explanation: "사용자가 내린 명령(Shell)을 번역하여 실제 하드웨어를 제어하는 심장부(Kernel)입니다." },
+    { id: 40, tag: "OS", difficulty: "Lv.3", question: "프로세스가 준비(Ready) 상태에서 실행(Run) 상태로 전이되며 CPU를 할당받는 과정을 무엇이라 하는가?", answer: "디스패치", explanation: "스케줄러에 의해 선택된 프로세스에 CPU 제어권을 넘겨주는 작업(Dispatch)입니다." },
+
+    { id: 41, tag: "네트워크", difficulty: "Lv.1", question: "인터넷 환경에서 웹 서버와 클라이언트(웹 브라우저) 간에 HTML 문서를 주고받기 위한 통신 규약은?", answer: "HTTP", explanation: "HyperText Transfer Protocol의 약자이며, 보안이 강화된 버전은 HTTPS입니다." },
+    { id: 42, tag: "네트워크", difficulty: "Lv.3", question: "네트워크 계층의 IP 주소를 데이터 링크 계층의 물리적 주소(MAC 주소)로 변환해 주는 프로토콜은?", answer: "ARP", explanation: "Address Resolution Protocol의 약자입니다. 반대로 MAC을 IP로 바꿀 때는 RARP를 씁니다." },
+    { id: 43, tag: "네트워크", difficulty: "Lv.2", question: "OSI 7계층 중 종단 간(End-to-End)의 신뢰성 있는 데이터 전송을 담당하며 TCP/UDP 프로토콜이 속한 계층은?", answer: "전송 계층", explanation: "4계층인 전송 계층(Transport Layer)은 데이터의 오류 제어와 흐름 제어를 담당합니다." },
+    { id: 44, tag: "네트워크", difficulty: "Lv.2", question: "현재 가장 널리 사용되는 IP 주소 체계인 IPv4는 총 몇 비트(bit)로 구성되어 있는가?", answer: "32비트", explanation: "8비트씩 4개의 옥텟(점)으로 구분되어 총 32비트(약 43억 개)의 주소를 가집니다. 차세대 IPv6는 128비트입니다." }
+       
+        
+        
+        
         ];
 
         let score = 0;
