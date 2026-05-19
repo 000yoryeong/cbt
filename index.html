@@ -88,9 +88,13 @@
     { id: 42, tag: "네트워크", difficulty: "Lv.3", question: "네트워크 계층의 IP 주소를 데이터 링크 계층의 물리적 주소(MAC 주소)로 변환해 주는 프로토콜은?", answer: "ARP", explanation: "Address Resolution Protocol의 약자입니다. 반대로 MAC을 IP로 바꿀 때는 RARP를 씁니다." },
     { id: 43, tag: "네트워크", difficulty: "Lv.2", question: "OSI 7계층 중 종단 간(End-to-End)의 신뢰성 있는 데이터 전송을 담당하며 TCP/UDP 프로토콜이 속한 계층은?", answer: "전송 계층", explanation: "4계층인 전송 계층(Transport Layer)은 데이터의 오류 제어와 흐름 제어를 담당합니다." },
     { id: 44, tag: "네트워크", difficulty: "Lv.2", question: "현재 가장 널리 사용되는 IP 주소 체계인 IPv4는 총 몇 비트(bit)로 구성되어 있는가?", answer: "32비트", explanation: "8비트씩 4개의 옥텟(점)으로 구분되어 총 32비트(약 43억 개)의 주소를 가집니다. 차세대 IPv6는 128비트입니다." },
-            
-       
-// [기존 문제들 뒤에 이어서 붙여넣으세요]
+    { id: 45, tag: "C언어", difficulty: "Lv.2", question: "int a=10, b=20; int *p; p=&a; *p=*p+b; printf('%d', a); 의 결과는?", answer: "30", explanation: "포인터 p가 a를 가리키므로 *p를 바꾸면 a가 바뀝니다. 10+20=30입니다." },
+    { id: 46, tag: "Java", difficulty: "Lv.3", question: "자식 클래스에서 부모 클래스의 생성자를 명시적으로 호출할 때 사용하는 키워드는?", answer: "super", explanation: "super()는 부모의 생성자, super.메서드()는 부모의 메서드를 호출할 때 씁니다." },
+    { id: 47, tag: "Python", difficulty: "Lv.2", question: "a = 'Programming'; print(a[2:5]); 의 결과는?", answer: "ogr", explanation: "인덱스 2번(o)부터 5번 전(4번 r)까지 추출합니다." },
+    { id: 48, tag: "SQL", difficulty: "Lv.2", question: "SELECT 이름 FROM 사원 ORDER BY 이름 (  ); 내림차순 정렬 빈칸은?", answer: "DESC", explanation: "오름차순은 ASC(생략가능), 내림차순은 DESC입니다." },
+    { id: 49, tag: "Linux", difficulty: "Lv.1", question: "파일의 소유자, 그룹, 기타 사용자의 권한을 변경하는 명령어는?", answer: "chmod", explanation: "Change Mode의 약자로 예시문제 2번에 등장한 필수 명령어입니다." },
+    { id: 50, tag: "C언어", difficulty: "Lv.1", question: "printf('%03d', 7); 의 출력 결과는?", answer: "007", explanation: "3자리 숫자로 출력하되, 빈자리는 0으로 채우라는 뜻입니다." },
+
     { id: 51, tag: "C언어", difficulty: "Lv.1", question: "int a = 10; printf('%d', a--); 실행 직후 출력되는 값은?", answer: "10", explanation: "후위 감소 연산자(--)는 값을 먼저 출력하고 나중에 1을 감소시킵니다." },
     { id: 52, tag: "Java", difficulty: "Lv.2", question: "클래스 내에서 객체 자신을 가리키는 키워드는?", answer: "this", explanation: "this는 현재 실행 중인 객체의 주소를 가리키며, 멤버 변수와 지역 변수를 구분할 때 자주 씁니다." },
     { id: 53, tag: "Python", difficulty: "Lv.2", question: "a = [1, 2, 3]; a.pop(0); print(a); 의 결과는?", answer: "[2, 3]", explanation: "pop(0)은 리스트의 0번 인덱스 요소를 제거하고 반환합니다." },
@@ -113,8 +117,34 @@
     { id: 70, tag: "OS", difficulty: "Lv.2", question: "두 개 이상의 프로세스가 서로 상대방의 자원을 기다리며 무한 대기하는 상태는?", answer: "교착상태", explanation: "데드락(Deadlock)이라고도 하며, 발생의 4가지 조건(상호배제, 점유대기, 비선점, 환상대기)이 있습니다." },
     { id: 71, tag: "C언어", difficulty: "Lv.1", question: "printf('%%'); 를 실행하면 화면에 무엇이 출력되는가?", answer: "%", explanation: "printf에서 % 기호 자체를 출력하려면 %%를 두 번 써야 합니다." },
     { id: 72, tag: "Java", difficulty: "Lv.3", question: "상속받은 클래스에서 부모의 메서드를 다시 정의하는 것을 무엇이라 하는가?", answer: "오버라이딩", explanation: "Overriding은 '덮어쓰다'는 의미로 자식 클래스에서 기능을 재정의합니다." },
-    { id: 73, tag: "Python", difficulty: "Lv.2", question: "a = [1, 2, 3]; b = a[::-1]; print(b); 의 결과는?", answer: "[3, 2, 1]", explanation: "슬라이싱        
-        
+    { id: 73, tag: "Python", difficulty: "Lv.2", question: "a = [1, 2, 3]; b = a[::-1]; print(b); 의 결과는?", answer: "[3, 2, 1]", explanation: "슬라이싱 [::-1]은 리스트의 순서를 거꾸로 뒤집습니다." },
+    { id: 74, tag: "SQL", difficulty: "Lv.1", question: "조건을 지정하여 데이터를 조회할 때 사용하는 SQL 절은?", answer: "WHERE", explanation: "SELECT ... FROM ... WHERE 조건식 순서로 작성합니다." },
+    { id: 75, tag: "Linux", difficulty: "Lv.1", question: "파일이나 디렉토리를 복사할 때 사용하는 명령어는?", answer: "cp", explanation: "copy의 약자로 원본과 복사본 이름을 인자로 받습니다." },
+    { id: 76, tag: "C언어", difficulty: "Lv.2", question: "정수형 데이터를 8진수로 출력하기 위한 서식 지정자는?", answer: "%o", explanation: "10진수는 %d, 8진수는 %o, 16진수는 %x를 씁니다." },
+    { id: 77, tag: "Java", difficulty: "Lv.2", question: "변수를 상수로 만들 때 앞에 붙이는 키워드는?", answer: "final", explanation: "final이 붙은 변수는 값을 한 번 할당하면 다시 바꿀 수 없습니다." },
+    { id: 78, tag: "Python", difficulty: "Lv.1", question: "a = {1, 2, 2, 3}; print(len(a)); 의 결과는?", answer: "3", explanation: "집합(Set) 자료형은 중복된 값을 자동으로 제거합니다. {1, 2, 3}이 됩니다." },
+    { id: 79, tag: "SQL", difficulty: "Lv.2", question: "집계 함수 중 컬럼의 평균값을 구하는 함수명은?", answer: "AVG", explanation: "SUM(합계), COUNT(개수), MAX(최대), MIN(최소) 등이 있습니다." },
+    { id: 80, tag: "네트워크", difficulty: "Lv.2", question: "도메인 이름을 IP 주소로 변환해주는 시스템은?", answer: "DNS", explanation: "Domain Name System의 약자로 인터넷의 주소록 역할을 합니다." },
+    { id: 81, tag: "C언어", difficulty: "Lv.3", question: "int x=5, y=10; int res = ++x + y--; res의 값은?", answer: "16", explanation: "++x로 6이 되고, 10과 더해져 16이 됩니다. y는 계산 후에 9로 감소합니다." },
+    { id: 82, tag: "Java", difficulty: "Lv.1", question: "자바에서 모든 클래스의 최상위 부모 클래스는?", answer: "Object", explanation: "어떤 클래스를 만들어도 자동으로 Object 클래스를 상속받게 됩니다." },
+    { id: 83, tag: "Python", difficulty: "Lv.2", question: "print('abc' * 2) 의 출력 결과는?", answer: "abcabc", explanation: "파이썬에서 문자열 곱셈은 해당 문자열을 횟수만큼 반복합니다." },
+    { id: 84, tag: "SQL", difficulty: "Lv.2", question: "테이블에서 데이터를 삭제할 때 쓰는 DML 명령어는?", answer: "DELETE", explanation: "DELETE FROM 테이블명 WHERE 조건 형식으로 씁니다." },
+    { id: 85, tag: "OS", difficulty: "Lv.2", question: "리눅스에서 현재 실행 중인 프로세스 목록을 확인하는 명령어는?", answer: "ps", explanation: "Process Status의 약자로 현재 활성화된 프로세스를 보여줍니다." },
+    { id: 86, tag: "C언어", difficulty: "Lv.2", question: "char a = 'A'; printf('%d', a); 의 결과는? (단, A의 아스키코드는 65)", answer: "65", explanation: "문자형 변수를 정수(%d)로 출력하면 해당 문자의 아스키코드 값이 나옵니다." },
+    { id: 87, tag: "Java", difficulty: "Lv.3", question: "하나의 클래스에 이름이 같지만 매개변수가 다른 메서드를 여러 개 만드는 것은?", answer: "오버로딩", explanation: "Overloading은 과적(많이 싣다)의 의미로, 파라미터가 다르면 같은 이름을 쓸 수 있습니다." },
+    { id: 88, tag: "Python", difficulty: "Lv.1", question: "a = 10 % 3; print(a) 의 결과는?", answer: "1", explanation: "나머지 연산자로 10을 3으로 나눈 나머지 1이 출력됩니다." },
+    { id: 89, tag: "SQL", difficulty: "Lv.3", question: "기존 테이블에 새로운 컬럼을 추가하기 위해 사용하는 명령어는?", answer: "ALTER TABLE", explanation: "테이블 구조를 변경할 때는 ALTER 명령을 사용합니다." },
+    { id: 90, tag: "네트워크", difficulty: "Lv.1", question: "사설 IP 주소를 공인 IP 주소로 변환해주는 기술은?", answer: "NAT", explanation: "Network Address Translation의 약자로 주로 공유기에서 쓰입니다." },
+    { id: 91, tag: "C언어", difficulty: "Lv.1", question: "조건이 참인 동안 코드를 무한 반복할 때 쓰는 구문은?", answer: "while", explanation: "괄호 안의 조건이 참(1)인 동안 계속해서 블록을 실행합니다." },
+    { id: 92, tag: "Java", difficulty: "Lv.2", question: "실수형 데이터를 저장하는 기본 8바이트 자료형은?", answer: "double", explanation: "4바이트는 float, 8바이트는 double입니다." },
+    { id: 93, tag: "Python", difficulty: "Lv.3", question: "a = [1, 2]; a.extend([3, 4]); print(len(a)); 의 결과는?", answer: "4", explanation: "extend는 리스트 끝에 다른 리스트의 모든 요소를 추가하여 확장합니다." },
+    { id: 94, tag: "SQL", difficulty: "Lv.2", question: "조회된 결과에서 정렬 기준을 지정하는 절은?", answer: "ORDER BY", explanation: "기본값은 오름차순(ASC)입니다." },
+    { id: 95, tag: "Linux", difficulty: "Lv.2", question: "디렉토리를 생성할 때 사용하는 명령어는?", answer: "mkdir", explanation: "Make Directory의 약자입니다." },
+    { id: 96, tag: "C언어", difficulty: "Lv.2", question: "함수 외부에서 선언되어 프로그램 전체에서 사용 가능한 변수는?", answer: "전역변수", explanation: "특정 함수 안에서만 쓰는 지역변수와 대비되는 개념입니다." },
+    { id: 97, tag: "Java", difficulty: "Lv.1", question: "소스 파일 첫 줄에 소속 그룹을 명시하기 위해 사용하는 키워드는?", answer: "package", explanation: "클래스들을 폴더처럼 묶어 관리하는 단위입니다." },
+    { id: 98, tag: "Python", difficulty: "Lv.2", question: "a = ' Hello '; print(a.strip()); 의 결과는?", answer: "Hello", explanation: "strip() 메서드는 문자열 양 끝의 공백을 제거합니다." },
+    { id: 99, tag: "SQL", difficulty: "Lv.1", question: "데이터베이스에서 행(Row)을 가리키는 또 다른 용어는?", answer: "튜플", explanation: "열은 속성(Attribute) 또는 필드, 행은 튜플(Tuple) 또는 레코드라고 합니다." },
+    { id: 100, tag: "OS", difficulty: "Lv.3", question: "하나의 CPU가 여러 프로세스를 아주 빠르게 번갈아 실행하여 마치 동시에 처리되는 것처럼 보이는 방식은?", answer: "시분할 시스템", explanation: "Time Sharing System으로 현대 운영체제의 핵심 방식입니다." }
         
         ];
 
