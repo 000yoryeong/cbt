@@ -62,23 +62,24 @@
             return s;
         }
 
-        function generateExam() {
-            // 난이도별 데이터 분리
-            const lv1 = shuffle(questionPool.filter(q => q.difficulty === "Lv.1"));
-            const lv2 = shuffle(questionPool.filter(q => q.difficulty === "Lv.2"));
-            const lv3 = shuffle(questionPool.filter(q => q.difficulty === "Lv.3"));
-            
-            // 60:20:20 비율로 최대 20문제 조합
-            const exam = [
-                ...lv1.slice(0, 12),
-                ...lv2.slice(0, 4),
-                ...lv3.slice(0, 4)
-            ];
-            return shuffle(exam);
-        }
-
-        function checkAnswer(idx) {
-            const btn = document.getElementById(`btn-${idx}`);
-            if (btn.disabled) return;
-
-            const inputField = document.getElementById
+       function generateExam() {
+    // [수정] 데이터가 부족해도 일단 있는 거라도 다 보여주는 로직
+    const totalNeeded = 20;
+    
+    // 난이도별로 최대한 뽑아봅니다.
+    const lv1 = shuffle(questionPool.filter(q => q.difficulty === "Lv.1"));
+    const lv2 = shuffle(questionPool.filter(q => q.difficulty === "Lv.2"));
+    const lv3 = shuffle(questionPool.filter(q => q.difficulty === "Lv.3"));
+    
+    // 일단 난이도별로 합치고
+    let combined = [...lv1.slice(0, 12), ...lv2.slice(0, 4), ...lv3.slice(0, 4)];
+    
+    // 만약 그래도 20개가 안 된다면? 난이도 상관없이 나머지 다 긁어모으기
+    if (combined.length < totalNeeded) {
+        const usedIds = new Set(combined.map(q => q.id));
+        const remaining = questionPool.filter(q => !usedIds.has(q.id));
+        combined = [...combined, ...shuffle(remaining).slice(0, totalNeeded - combined.length)];
+    }
+    
+    return shuffle(combined);
+}
